@@ -146,8 +146,9 @@ li.search img {
     overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
     text-overflow: ellipsis; /* Menampilkan "..." jika teks melebihi batas */
     white-space: normal;
+    min-height: 88px;
     display: -webkit-box;
-    -webkit-line-clamp: 5; /* Sesuaikan dengan jumlah baris yang diinginkan */
+    -webkit-line-clamp: 4; /* Sesuaikan dengan jumlah baris yang diinginkan */
     -webkit-box-orient: vertical;
 }
 
@@ -189,24 +190,24 @@ li.search img {
     
 }
 
-.notes-title2 {
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    padding: 15px;
-    width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
-}
-
 .note {
     border-radius: 5px;
     padding: 15px;
-    margin: 10px; /* Sesuaikan dengan lebar yang diinginkan */
-    overflow: hidden;
+    margin: 10px;
     margin-right: 18px;
+    overflow: hidden;
     transition: outline 0.1s;
+    box-sizing: border-box;
 }
 
 .note:hover {
     outline: 2px solid #292929; /* Define the outline color and width on hover */
+}
+
+.notes-title2 {
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
 }
 
 
