@@ -88,8 +88,8 @@ li.search img {
 }
 
 .botnavigation>li>img {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
 }
 
 /* Gaya dasar untuk tombol */
@@ -166,15 +166,16 @@ li.search img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 10px;
-    padding-bottom: 110px;
-    margin-top: 0px; /* Sesuaikan dengan tinggi top navigation */
+    padding: 10px 0px 10px 10px;
+    padding-bottom: 100px;
+    margin-right: 0px; /* Sesuaikan dengan tinggi top navigation */
 }
 
 .vertical-scroll-container {
     display: block;
     overflow-y: auto; /* Menyertakan scrollbar horizontal jika kontennya melebihi lebar */ /* Sesuaikan dengan margin yang diinginkan */
     width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
+    padding: 10px;
     @media only screen and (min-width: 768px) {
             display: grid;
             grid-template-columns: 1fr 1fr; /* Membagi kolom menjadi dua bagian */
@@ -219,5 +220,6 @@ li.search img {
     color: #ffffff;
     padding-top: 20px;
 }
+
 
 
