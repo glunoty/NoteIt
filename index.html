@@ -7,6 +7,68 @@
     <title>NoteIt</title>
 </head>
 
+<!-- ... (HTML yang sudah ada) ... -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const externalNotesContainerHorizontal = document.getElementById('external-notes-container-horizontal');
+        const externalNotesContainerVertical = document.getElementById('external-notes-container-vertical');
+
+        // Ganti URL dengan URL yang sesuai dengan lokasi data.json
+        const dataUrl = 'data.json';
+
+        fetch(dataUrl)
+            .then(response => response.json())
+            .then(data => {
+                // Loop melalui setiap catatan dan tambahkan ke dalam container horizontal
+                data.forEach(note => {
+                    const noteElement = document.createElement('div');
+                    noteElement.classList.add('note1');
+
+                    const titleElement = document.createElement('h3');
+                    titleElement.textContent = note.title;
+
+                    const contentElement = document.createElement('p');
+                    contentElement.textContent = note.notes;
+
+                    const dateElement = document.createElement('h4');
+                    dateElement.textContent = note.date;
+
+                    noteElement.appendChild(titleElement);
+                    noteElement.appendChild(contentElement);
+                    noteElement.appendChild(dateElement);
+
+                    externalNotesContainerHorizontal.appendChild(noteElement);
+                });
+
+                // Loop melalui setiap catatan dan tambahkan ke dalam container vertical
+                data.forEach(note => {
+                    const noteElement = document.createElement('div');
+                    noteElement.classList.add('note');
+
+                    const titleElement = document.createElement('h3');
+                    titleElement.textContent = note.title;
+
+                    const contentElement = document.createElement('p');
+                    contentElement.textContent = note.notes;
+
+                    const dateElement = document.createElement('h4');
+                    dateElement.textContent = note.date;
+
+                    noteElement.appendChild(titleElement);
+                    noteElement.appendChild(contentElement);
+                    noteElement.appendChild(dateElement);
+
+                    externalNotesContainerVertical.appendChild(noteElement);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    });
+</script>
+
+<!-- ... (HTML yang sudah ada) ... -->
+
+
 <body>
     <div class="container">
         <nav class="wrapper">
@@ -19,71 +81,18 @@
         </nav>
     </div>
 
-    <div class="horizontal-scroll-container">
-        <!-- Setiap catatan akan menjadi anak dari container ini -->
-    
-        <!-- Tambahkan catatan-catatan lainnya sesuai kebutuhan -->
-    </div>
-
     <div class="notes-container">
-        <div class="horizontal-scroll-container">
-        <div class="note1">
-            <h3>Judul Catatan 1</h3>
-            <p>Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.</p>
-            <h4>20 May</h4>
+        <div class="notes-title">
+            <h2>Recently Created</h2>
         </div>
-
-        <div class="note1">
-            <h3>Judul Catatan 1</h3>
-            <p>Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.</p>
-            <h4>20 May</h4>
-        </div>
-
-        <div class="note1">
-            <h3>Judul Catatan 1</h3>
-            <p>Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.</p>
-            <h4>20 May</h4>
-        </div>
-
-        <div class="note1">
-            <h3>Judul Catatan 1</h3>
-            <p>Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.</p>
-            <h4>20 May</h4>
-        </div>
-    </div>
+        <div class="horizontal-scroll-container" id="external-notes-container-horizontal"></div>
    
 
         <div class="notes-title2">
             <h2>All Notes</h2>
         </div>
+        <div class="vertical-scroll-container" id="external-notes-container-vertical"></div>
         <!-- Setiap catatan akan menjadi anak dari container ini -->
-        <div class="note">
-            <h3>Judul Catatan 1</h3>
-            <p>Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.</p>
-            <h4>20 May</h4>
-        </div>
-
-        <div class="note">
-            <h3>Judul Catatan 1</h3>
-            <p>Isi catatan pertama...</p>
-        </div>
-
-        <div class="note">
-            <h3>Judul Catatan 1</h3>
-            <p>Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.</p>
-        </div>
-
-        <div class="note">
-            <h3>Judul Catatan 1</h3>
-            <p>Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.</p>
-        </div>
-
-        <div class="note">
-            <h3>Judul Catatan 1</h3>
-            <p>Saya mohon maaf atas kebingungan sebelumnya. Ada kemungkinan masalah ini disebabkan oleh gaya CSS yang diterapkan pada elemen .botwrapper yang diberi position: fixed; bottom: 0;. Gaya ini membuat elemen tersebut tetap di bagian bawah halaman, mengatasi elemen-elemen yang berada di atasnya.</p>
-        </div>
-    
-        <!-- Tambahkan catatan-catatan lainnya sesuai kebutuhan -->
     </div>
     
 
