@@ -22,7 +22,7 @@
     font-size: 20px;
     padding: 15px;
     width: 100%;
-    height: 50px;
+    height: 45px;
     background-color: rgb(255, 255, 255);
     border-bottom: 2px solid #ccc;
 }
@@ -45,7 +45,7 @@
 
 .navigation>li {
     list-style: none;
-    padding: 15px;
+    padding: 8px;
 }
 
 /* Profile */
@@ -55,11 +55,14 @@ li.profile img {
     border-radius: 50px;
     object-fit: cover;
     border: 2px solid black;
+    margin-top: 5px;
+    margin-right: 10px;
 }
 
 li.search img {
     width: 30px;
     height: 30px;
+    margin-top: 5px;
 }
 
 .botwrapper {
@@ -71,7 +74,7 @@ li.search img {
     font-size: 20px;
     padding: 15px;
     width: 100%;
-    height: 60px;
+    height: 45px;
     background-color: rgb(255, 255, 255);
     border-top: 2px solid #ccc;
 }
@@ -84,18 +87,19 @@ li.search img {
 
 .botnavigation>li {
     list-style: none;
-    padding: 15px;
+    padding: 12px;
 }
 
 .botnavigation>li>img {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+    padding-top: 3px;
 }
 
 /* Gaya dasar untuk tombol */
 .custom-button {
     display: inline-block;
-    padding: 10px 20px; /* Atur padding sesuai kebutuhan Anda */
+    padding: 13px 20px; /* Atur padding sesuai kebutuhan Anda */
     font-size: 16px; /* Atur ukuran font sesuai kebutuhan Anda */
     font-weight: bold;
     text-align: center;
@@ -122,8 +126,6 @@ li.search img {
 }
 
 .note1 {
-    background-color: #8c4646;
-    border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 15px;
     margin: 10px;
@@ -131,30 +133,34 @@ li.search img {
     height: 180px; /* Sesuaikan dengan tinggi maksimum yang diinginkan */
     overflow: hidden;
     flex-shrink: 0; /* Mencegah perubahan ukuran container catatan jika kontennya kurang dari lebar */
+    transition: outline 0.1s;
+}
+
+.note1:hover {
+    outline: 2px solid #292929; /* Define the outline color and width on hover */
 }
 
 .note1 p {
-    color: #ebebeb;
+    color: #3f3f3f;
     padding-top: 10px;
     overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
     text-overflow: ellipsis; /* Menampilkan "..." jika teks melebihi batas */
     white-space: normal;
     display: -webkit-box;
-    -webkit-line-clamp: 6; /* Sesuaikan dengan jumlah baris yang diinginkan */
+    -webkit-line-clamp: 5; /* Sesuaikan dengan jumlah baris yang diinginkan */
     -webkit-box-orient: vertical;
 }
 
 .note1 h3 {
-    color: #ffffff;
+    color: #151515;
 }
 
 .note1 h4 {
-    color: #ffffff;
-    padding-top: 20px;
+    color: #272727;
+    padding-top: 15px;
 }
 
 .notes-title {
-    border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 15px;
     width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
@@ -175,7 +181,6 @@ li.search img {
     display: block;
     overflow-y: auto; /* Menyertakan scrollbar horizontal jika kontennya melebihi lebar */ /* Sesuaikan dengan margin yang diinginkan */
     width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
-    padding: 10px;
     @media only screen and (min-width: 768px) {
             display: grid;
             grid-template-columns: 1fr 1fr; /* Membagi kolom menjadi dua bagian */
@@ -192,22 +197,26 @@ li.search img {
 }
 
 .note {
-    background-color: #8c4646;
-    border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 15px;
     margin: 10px; /* Sesuaikan dengan lebar yang diinginkan */
     overflow: hidden;
+    margin-right: 18px;
+    transition: outline 0.1s;
+}
+
+.note:hover {
+    outline: 2px solid #292929; /* Define the outline color and width on hover */
 }
 
 
 .note h3 {
-    color: #ffffff;
+    color: #272727;
 }
 
 .note p {
-    color: #ebebeb;
-    padding-top: 10px;
+    color: #3f3f3f;
+    padding-top: 15px;
     overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
     text-overflow: ellipsis; /* Menampilkan "..." jika teks melebihi batas */
     white-space: normal;
@@ -217,7 +226,7 @@ li.search img {
 }
 
 .note h4 {
-    color: #ffffff;
+    color: #272727;
     padding-top: 20px;
 }
 

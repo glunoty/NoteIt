@@ -24,6 +24,7 @@
                 data.forEach(note => {
                     const noteElement = document.createElement('div');
                     noteElement.classList.add('note1');
+                    noteElement.style.backgroundColor = note.color;
 
                     const titleElement = document.createElement('h3');
                     titleElement.textContent = note.title;
@@ -42,10 +43,13 @@
                 });
 
                 // Loop melalui setiap catatan dan tambahkan ke dalam container vertical
+                // Reverse the order of the notes
+                data.reverse();
                 data.forEach(note => {
                     const noteElement = document.createElement('div');
                     noteElement.classList.add('note');
-
+                    noteElement.style.backgroundColor = note.color;
+                    
                     const titleElement = document.createElement('h3');
                     titleElement.textContent = note.title;
 
