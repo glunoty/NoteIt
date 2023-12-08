@@ -1,7 +1,7 @@
 *, html, body {
     margin: 0%;
     padding: 0%;
-    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-family: 'lexend';
 }
 
 .container {
@@ -9,7 +9,7 @@
     justify-content: center;
     width: 100%;
     height: 70px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(220, 105, 105);
 }
 
 /* T O P  N A V I G A T I O N */
@@ -31,6 +31,7 @@
     display: flex;
     flex-direction: row;
     font-size: 1.5em;
+    font-family: Arial;
     padding: 15px;
     text-transform: capitalize;
     color: rgb(24, 24, 24);
@@ -96,27 +97,72 @@ li.search img {
     padding-top: 3px;
 }
 
-/* Gaya dasar untuk tombol */
 .custom-button {
     display: inline-block;
-    padding: 13px 20px; /* Atur padding sesuai kebutuhan Anda */
-    font-size: 16px; /* Atur ukuran font sesuai kebutuhan Anda */
+    padding: 13px 20px;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     border: none;
-    border-radius: 5px; /* Atur border radius sesuai kebutuhan Anda */
-    background-color: #081f2e; /* Atur warna latar belakang sesuai kebutuhan Anda */
-    color: #fff; /* Atur warna teks sesuai kebutuhan Anda */
-    box-sizing: border-box; /* Menyertakan padding dan border ke dalam ukuran total elemen */
+    border-radius: 5px;
+    background-color: #081f2e;
+    color: #fff;
+    box-sizing: border-box;
     margin-right: 50px;
 }
 
-/* Efek hover untuk tombol */
 .custom-button:hover {
-    background-color: #152f40; /* Ganti warna latar belakang saat tombol dihover */
+    background-color: #152f40;
 }
+
+/* Media query untuk tampilan desktop */
+@media screen and (min-width: 768px) {
+    .botwrapper {
+        flex-direction: column; /* Mengatur tata letak menjadi kolom */
+        align-items: flex-start;
+        height: 100vh; /* Atur tinggi 100% dari viewport height */
+        width: 200px; /* Atur lebar sesuai kebutuhan Anda */
+        padding: 20px; /* Atur padding sesuai kebutuhan Anda */
+        background-color: #ffffff;
+    }
+
+    .botnavigation {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px; /* Menambahkan margin atas pada navigasi */
+        align-items: flex-start;
+    }
+
+    .custom-button {
+        margin-right: 0; /* Menghilangkan margin kanan pada tombol */
+        margin-top: 10px; /* Menambahkan margin atas pada tombol */
+   
+    }
+
+    .botnavigation>li {
+        display: flex; /* Show text in desktop mode */
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .botnavigation>li>span {
+        display: inline; /* Show text in desktop mode */
+        margin-left: 10px; /* Add some spacing between the icon and text */
+        margin-top: 5px;
+        color: #2d2d2d;
+        font-weight:500;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .botnavigation>li>span {
+        display: none; /* Hide text in mobile mode */
+    }
+}
+
+
 
 /* C O N T E N T  R E C E N T L Y */
 .horizontal-scroll-container {
@@ -141,30 +187,60 @@ li.search img {
 }
 
 .note1 p {
-    color: #3f3f3f;
+    color: #464646;
+    font-weight: 400;
     padding-top: 10px;
     overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
     text-overflow: ellipsis; /* Menampilkan "..." jika teks melebihi batas */
     white-space: normal;
-    min-height: 88px;
+    min-height: 84px;
     display: -webkit-box;
     -webkit-line-clamp: 4; /* Sesuaikan dengan jumlah baris yang diinginkan */
     -webkit-box-orient: vertical;
 }
 
 .note1 h3 {
-    color: #151515;
+    color: #2d2d2d;
+    font-weight: 500;
+    overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Sesuaikan dengan jumlah baris yang diinginkan */
+    -webkit-box-orient: vertical;
 }
 
 .note1 h4 {
-    color: #272727;
+    color: #2d2d2d;
     padding-top: 15px;
 }
 
 .notes-title {
     border-radius: 5px;
     padding: 15px;
+    color: #2d2d2d;
     width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
+}
+
+.notes-title h2 {
+    font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+    .horizontal-scroll-container {
+        margin-left: 230px;
+    }
+
+    .vertical-scroll-container {
+        margin-left: 230px;
+    }
+
+    .notes-title {
+        margin-left: 230px;
+    }
+
+    .notes-title2 {
+        margin-left: 230px;
+    }
 }
 
 
@@ -174,8 +250,11 @@ li.search img {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 10px 0px 10px 10px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     margin-right: 0px; /* Sesuaikan dengan tinggi top navigation */
+    @media only screen and (min-width: 768px) {
+        padding-bottom: 20px;
+    }
 }
 
 .vertical-scroll-container {
@@ -207,17 +286,29 @@ li.search img {
 .notes-title2 {
     border-radius: 5px;
     padding: 15px;
+    color: #2d2d2d;
     width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
+}
+
+.notes-title2 h2 {
+    font-weight: 500;
 }
 
 
 .note h3 {
-    color: #272727;
+    color: #2d2d2d;
+    font-weight: 500;
+    overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Sesuaikan dengan jumlah baris yang diinginkan */
+    -webkit-box-orient: vertical;
 }
 
 .note p {
-    color: #3f3f3f;
-    padding-top: 15px;
+    color: #464646;
+    font-weight: 400;
+    padding-top: 10px;
     overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
     text-overflow: ellipsis; /* Menampilkan "..." jika teks melebihi batas */
     white-space: normal;
@@ -227,9 +318,7 @@ li.search img {
 }
 
 .note h4 {
-    color: #272727;
-    padding-top: 20px;
+    color: #2d2d2d;
+    padding-top: 15px;
 }
-
-
 

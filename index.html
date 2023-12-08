@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>NoteIt</title>
 </head>
 <body>
+
+    <div class="botcontainer">
+        <nav class="botwrapper">
+            <ul class="botnavigation">
+                <li><img src="./Asset/home.png" alt=""><span>Home</span></li>
+                <li><img src="./Asset/favourite.png" alt=""><span>Favourite</span></li>
+                <li><img src="./Asset/trash.png" alt=""><span>Trash</span></li>
+            </ul>
+
+            <button class="custom-button">New Notes</button>
+        </nav>
+    </div>
+
     <div class="container">
         <nav class="wrapper">
             <div class="brand">NoteIt</div>
@@ -27,25 +41,11 @@
         </div>
         <div class="horizontal-scroll-container" id="external-notes-container-horizontal"></div>
    
-
         <div class="notes-title2">
             <h2>All Notes</h2>
         </div>
         <div class="vertical-scroll-container" id="external-notes-container-vertical"></div>
         <!-- Setiap catatan akan menjadi anak dari container ini -->
-    </div>
-    
-
-    <div class="botcontainer">
-        <nav class="botwrapper">
-            <ul class="botnavigation">
-                <li><img src="./Asset/home.png" alt=""></li>
-                <li><img src="./Asset/favourite.png" alt=""></li>
-                <li><img src="./Asset/trash.png" alt=""></li>
-            </ul>
-
-            <button class="custom-button">New Notes</button>
-        </nav>
     </div>
 
 <script src="script.js"></script>
