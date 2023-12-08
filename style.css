@@ -137,7 +137,10 @@ li.search img {
     padding: 15px;
     margin: 10px;
     width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
+    max-height: 240px;
+    overflow: hidden;
 }
+
 
 .note h3 {
     color: #ffffff;
@@ -145,4 +148,16 @@ li.search img {
 
 .note p {
     color: #ebebeb;
+    padding-top: 10px;
+    overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
+    text-overflow: ellipsis; /* Menampilkan "..." jika teks melebihi batas */
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 9; /* Sesuaikan dengan jumlah baris yang diinginkan */
+    -webkit-box-orient: vertical;
+}
+
+.note h4 {
+    color: #ebebeb;
+    padding-top: 20px;
 }
