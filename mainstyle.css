@@ -121,7 +121,7 @@ li.search img {
         flex-direction: column; /* Mengatur tata letak menjadi kolom */
         align-items: flex-start;
         height: 100vh; /* Atur tinggi 100% dari viewport height */
-        width: 200px; /* Atur lebar sesuai kebutuhan Anda */
+        width: 200px;
         padding: 20px; /* Atur padding sesuai kebutuhan Anda */
         background-color: #ffffff;
     }
