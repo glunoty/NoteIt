@@ -167,16 +167,20 @@ li.search img {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 10px;
+    padding-bottom: 110px;
     margin-top: 0px; /* Sesuaikan dengan tinggi top navigation */
 }
 
 .vertical-scroll-container {
-    display:block;
-    @media only screen and (min-width:768px) {
-        display:flex;
-    }
+    display: block;
     overflow-y: auto; /* Menyertakan scrollbar horizontal jika kontennya melebihi lebar */ /* Sesuaikan dengan margin yang diinginkan */
     width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
+    @media only screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Membagi kolom menjadi dua bagian */
+            gap: 5px; /* Spasi antar kolom */
+        }
+    
 }
 
 .notes-title2 {
