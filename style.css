@@ -114,7 +114,38 @@ li.search img {
     background-color: #152f40; /* Ganti warna latar belakang saat tombol dihover */
 }
 
-/* C O N T E N T */
+/* C O N T E N T  R E C E N T L Y */
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto; /* Menyertakan scrollbar horizontal jika kontennya melebihi lebar */
+    margin-top: 10px; /* Sesuaikan dengan margin yang diinginkan */
+}
+
+.note1 {
+    background-color: #8c4646;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 240px; /* Sesuaikan dengan lebar yang diinginkan */
+    max-height: 240px; /* Sesuaikan dengan tinggi maksimum yang diinginkan */
+    overflow: hidden;
+    flex-shrink: 0; /* Mencegah perubahan ukuran container catatan jika kontennya kurang dari lebar */
+}
+
+.note1 p {
+    color: #ebebeb;
+    padding-top: 10px;
+    overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
+    text-overflow: ellipsis; /* Menampilkan "..." jika teks melebihi batas */
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Sesuaikan dengan jumlah baris yang diinginkan */
+    -webkit-box-orient: vertical;
+}
+
+
+/* C O N T E N T  A L L */
 .notes-container {
     display: flex;
     flex-wrap: wrap;
@@ -137,7 +168,6 @@ li.search img {
     padding: 15px;
     margin: 10px;
     width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
-    max-height: 240px;
     overflow: hidden;
 }
 
@@ -153,11 +183,13 @@ li.search img {
     text-overflow: ellipsis; /* Menampilkan "..." jika teks melebihi batas */
     white-space: normal;
     display: -webkit-box;
-    -webkit-line-clamp: 9; /* Sesuaikan dengan jumlah baris yang diinginkan */
+    -webkit-line-clamp: 8; /* Sesuaikan dengan jumlah baris yang diinginkan */
     -webkit-box-orient: vertical;
 }
 
 .note h4 {
-    color: #ebebeb;
+    color: #ffffff;
     padding-top: 20px;
 }
+
+
