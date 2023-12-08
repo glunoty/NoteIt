@@ -115,25 +115,34 @@ li.search img {
 }
 
 /* C O N T E N T */
-/* Gaya untuk catatan */
 .notes-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
-    margin-top: 0; /* Sesuaikan dengan tinggi top navigation */
+    margin-top: 0px; /* Sesuaikan dengan tinggi top navigation */
+}
+
+.notes-title2 {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
 }
 
 .note {
     background-color: #8c4646;
-    border: 1px solid #7f5e5e;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 15px;
     margin: 10px;
-    width: 300px; /* Sesuaikan dengan lebar yang diinginkan */
+    width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
 }
 
-.note h2 {
-    color: #333;
+.note h3 {
+    color: #ffffff;
 }
 
+.note p {
+    color: #ebebeb;
+}
