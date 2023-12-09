@@ -95,6 +95,10 @@ li.search img {
     padding-top: 3px;
 }
 
+.botnavigation>li>span {
+    display: none;
+}
+
 .custom-button {
     display: inline-block;
     padding: 13px 20px;
@@ -115,56 +119,12 @@ li.search img {
     background-color: #152f40;
 }
 
-/* Media query untuk tampilan desktop */
-@media screen and (min-width: 768px) {
-    .botwrapper {
-        flex-direction: column; /* Mengatur tata letak menjadi kolom */
-        align-items: flex-start;
-        height: 100vh; /* Atur tinggi 100% dari viewport height */
-        width: 200px;
-        padding: 20px; /* Atur padding sesuai kebutuhan Anda */
-        background-color: #ffffff;
-    }
-
-    .botnavigation {
-        display: flex;
-        flex-direction: column;
-        margin-top: 100px; /* Menambahkan margin atas pada navigasi */
-        align-items: flex-start;
-    }
-
-    .custom-button {
-        margin-right: 0; /* Menghilangkan margin kanan pada tombol */
-        margin-top: 10px; /* Menambahkan margin atas pada tombol */
-   
-    }
-
-    .botnavigation>li {
-        display: flex; /* Show text in desktop mode */
-        align-items: center;
-        margin-bottom: 5px;
-    }
-
-    .botnavigation>li>span {
-        display: inline; /* Show text in desktop mode */
-        margin-left: 10px; /* Add some spacing between the icon and text */
-        margin-top: 5px;
-        color: #2d2d2d;
-        font-weight:500;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .botnavigation>li>span {
-        display: none; /* Hide text in mobile mode */
-    }
-}
-
 /* C O N T E N T  R E C E N T L Y */
 .horizontal-scroll-container {
     display: flex;
     overflow-x: auto; /* Menyertakan scrollbar horizontal jika kontennya melebihi lebar */ /* Sesuaikan dengan margin yang diinginkan */
     width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
+    padding-right: 10px;
 }
 
 .note1 {
@@ -189,7 +149,7 @@ li.search img {
     overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
     text-overflow: ellipsis; /* Menampilkan "..." jika teks melebihi batas */
     white-space: normal;
-    min-height: 84px;
+    min-height: 83px;
     display: -webkit-box;
     -webkit-line-clamp: 4; /* Sesuaikan dengan jumlah baris yang diinginkan */
     -webkit-box-orient: vertical;
@@ -221,24 +181,6 @@ li.search img {
     font-weight: 500;
 }
 
-@media screen and (min-width: 768px) {
-    .horizontal-scroll-container {
-        margin-left: 230px;
-    }
-
-    .vertical-scroll-container {
-        margin-left: 230px;
-    }
-
-    .notes-title {
-        margin-left: 230px;
-    }
-
-    .notes-title2 {
-        margin-left: 230px;
-    }
-}
-
 
 /* C O N T E N T  A L L */
 .notes-container {
@@ -248,15 +190,13 @@ li.search img {
     padding: 10px 0px 10px 10px;
     padding-bottom: 80px;
     margin-right: 0px; /* Sesuaikan dengan tinggi top navigation */
-    @media only screen and (min-width: 768px) {
-        padding-bottom: 20px;
-    }
 }
 
 .vertical-scroll-container {
     display: block;
     overflow-y: auto; /* Menyertakan scrollbar horizontal jika kontennya melebihi lebar */ /* Sesuaikan dengan margin yang diinginkan */
     width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
+    padding-bottom: 10px;
     @media only screen and (min-width: 768px) {
             display: grid;
             grid-template-columns: 1fr 1fr; /* Membagi kolom menjadi dua bagian */
