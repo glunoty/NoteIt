@@ -108,42 +108,40 @@
             const title = document.getElementById('title').value;
             const content = document.getElementById('content').value;
     
-            // Simpan ke GitHub menggunakan Fetch API
-            fetch('https://api.github.com/repos/<nama-akun>/<nama-repository>/contents/notes-data/index.json', {
+            // Mendapatkan SHA terbaru dari cabang 'main'
+            fetch('https://api.github.com/repos/glunoty/NoteIt/git/refs/heads/main', {
                 method: 'GET',
                 headers: {
-                    'Authorization': 'Bearer <token-GitHub>',
+                    'Authorization': 'Bearer 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',
                 },
             })
-                .then(response => response.json())
-                .then(data => {
-                    const newNote = {
-                        title: title,
-                        content: content,
-                        // Tambahkan properti lain jika diperlukan
-                    };
+            .then(response => response.json())
+            .then(data => {
+                const latestSha = data.object.sha;
     
-                    data.push(newNote);
-    
-                    return fetch('https://api.github.com/repos/glunoty/NoteIt/contents/notes-data/index.json', {
-                        method: 'PUT',
-                        headers: {
-                            'Authorization': 'Bearer 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',
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            message: 'Add new note',
-                            content: btoa(JSON.stringify(data, null, 2)),
-                            sha: data.sha,
-                        }),
-                    });
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Note added successfully:', data);
-                    // Handle feedback atau redirect ke halaman lain jika perlu
-                })
-                .catch(error => console.error('Error:', error));
+                // Selanjutnya, gunakan `latestSha` dalam permintaan PUT
+                return fetch('https://api.github.com/repos/glunoty/NoteIt/contents/notes-data/index.json', {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': 'Bearer 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',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        message: 'Add new note',
+                        content: btoa(JSON.stringify({
+                            title: title,
+                            content: content,
+                        }, null, 2)),
+                        sha: latestSha, // Menggunakan SHA terbaru
+                    }),
+                });
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Note added successfully:', data);
+                // Handle feedback atau redirect ke halaman lain jika perlu
+            })
+            .catch(error => console.error('Error:', error));
         });
     });
     
