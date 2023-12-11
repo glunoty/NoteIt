@@ -18,7 +18,9 @@
                     titleElement.textContent = note.title;
 
                     const contentElement = document.createElement('p');
-                    contentElement.textContent = note.notes;
+                    contentElement.innerHTML = note.notes
+                    .replace(/\n/g, '<br>')
+                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');                  
 
                     const dateElement = document.createElement('h4');
                     dateElement.textContent = note.date;
@@ -42,7 +44,9 @@
                     titleElement.textContent = note.title;
 
                     const contentElement = document.createElement('p');
-                    contentElement.textContent = note.notes;
+                    contentElement.innerHTML = note.notes
+                    .replace(/\n/g, '<br>')
+                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
 
                     const dateElement = document.createElement('h4');
                     dateElement.textContent = note.date;
