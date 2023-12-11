@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- S T Y L E -->
+    <link rel="Stylesheet" href="./style/mainstyle.css"/>
+    <link rel="Stylesheet" href="/style/navigation.css"/>
+
+
+    <!-- F O N T S -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>NoteIt</title>
+</head>
+<body>
+
+    <div class="botcontainer">
+        <nav class="botwrapper">
+            <ul class="botnavigation">
+                <li><a href="home.html"><img src="./asset/home.png" alt=""><span></span><a></a></li>
+                <li class="active"><img src="./asset/favourite.png" alt=""><span></span></li>
+                <li><img src="./asset/trash.png" alt=""><span>Trash</span></li>
+            </ul>
+
+            <button class="custom-button">New Notes</button>
+        </nav>
+    </div>
+
+    <div class="container">
+        <nav class="wrapper">
+            <div class="brand">NoteIt</div>
+
+            <ul class="navigation">
+                <li class="search"><img src="./asset/search.png" alt=""></li>
+                <li class="profile"><img src="./asset/profile.jpg" alt=""></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="notes-container">
+        <div class="notes-title2">
+            <h2>Favourite Notes</h2>
+        </div>
+        <div class="vertical-scroll-container" id="favourite-notes"></div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
